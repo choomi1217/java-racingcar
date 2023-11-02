@@ -16,8 +16,8 @@ public class StringSeperator {
     public List<String> filteredString(String target) {
         Matcher matcher = Delimiter.DELIMITER_PATTERN.matcher(target);
         if (matcher.find()) {
-            String[] split = matcher.group(2).split(delimiter.delimiter());
-            return Arrays.stream(split).collect(Collectors.toList());
+            String[] numbers = matcher.group(2).split(delimiter.delimiter());
+            return Arrays.stream(numbers).collect(Collectors.toList());
         }
         return Arrays.stream(target.split(delimiter.delimiter())).collect(Collectors.toList());
     }
