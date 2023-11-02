@@ -13,8 +13,6 @@ import static org.assertj.core.api.Assertions.*;
 
 public class StringSeperatorTest {
 
-    private static String DEFAULT_DELIMITER = ",|:";
-
     @DisplayName(" 기본 구분자 \",\", \":\" 를 뺀 문자열을 반환")
     @Test
     void checkDefaultDelimiter(){
