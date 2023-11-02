@@ -14,7 +14,7 @@ public class StringDelimiter {
     }
 
     public List<String> filteredString(String target) {
-        Matcher matcher = Delimiter.DELLIMITER_PATTERN.matcher(target);
+        Matcher matcher = Delimiter.DELIMITER_PATTERN.matcher(target);
         if (matcher.find()) {
             String[] split = matcher.group(2).split(delimiter.delimiter());
             return Arrays.stream(split).collect(Collectors.toList());
