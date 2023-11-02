@@ -7,7 +7,9 @@ public class Delimiter {
 
     public static final String DEFAULT_DELIMITER = ",|:";
     public static final Pattern DELLIMITER_PATTERN = Pattern.compile("//(.)\n(.*)");
+
     private final String delimiter;
+
     public Delimiter(String target) {
         this.delimiter = parsingDelimiter(target);
     }
