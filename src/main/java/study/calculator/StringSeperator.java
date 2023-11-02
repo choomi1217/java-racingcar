@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.stream.Collectors;
 
-public class StringDelimiter {
+public class StringSeperator {
 
     private final Delimiter delimiter;
 
-    public StringDelimiter(Delimiter delimiter) {
+    public StringSeperator(Delimiter delimiter) {
         this.delimiter = delimiter;
     }
 

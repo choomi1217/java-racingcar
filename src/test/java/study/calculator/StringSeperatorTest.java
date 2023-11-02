@@ -1,6 +1,5 @@
 package study.calculator;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,13 +7,11 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import static org.assertj.core.api.Assertions.*;
 
-public class StringDelimiterTest {
+public class StringSeperatorTest {
 
     private static String DEFAULT_DELIMITER = ",|:";
 
@@ -22,8 +19,8 @@ public class StringDelimiterTest {
     @Test
     void checkDefaultDelimiter(){
         String target = "1,2,3";
-        StringDelimiter stringDelimiter = new StringDelimiter(new Delimiter(target));
-        List<String> stringList = stringDelimiter.filteredString(target);
+        StringSeperator stringSeperator = new StringSeperator(new Delimiter(target));
+        List<String> stringList = stringSeperator.filteredString(target);
         assertThat(stringList).doesNotContain(",");
     }
 
@@ -31,8 +28,8 @@ public class StringDelimiterTest {
     @ParameterizedTest
     @MethodSource
     void checkCustomDelimiter(String target, String expected){
-        StringDelimiter stringDelimiter = new StringDelimiter(new Delimiter(target));
-        List<String> stringList = stringDelimiter.filteredString(target);
+        StringSeperator stringSeperator = new StringSeperator(new Delimiter(target));
+        List<String> stringList = stringSeperator.filteredString(target);
         assertThat(stringList).doesNotContain(expected);
     }
 

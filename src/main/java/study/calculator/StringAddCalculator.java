@@ -7,8 +7,8 @@ public class StringAddCalculator {
         if(origin == null || origin.isBlank()){
             return 0;
         }
-        StringDelimiter stringDelimiter = new StringDelimiter(new Delimiter(origin));
-        List<String> strings = stringDelimiter.filteredString(origin);
+        StringSeperator stringSeperator = new StringSeperator(new Delimiter(origin));
+        List<String> strings = stringSeperator.filteredString(origin);
         return UserNumbers.from(strings).sum();
     }
 }

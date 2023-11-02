@@ -1,8 +1,6 @@
 package study.calculator;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,8 +16,8 @@ public class UserNumbersTest {
     @ParameterizedTest
     @MethodSource
     void sum(String target, int expected){
-        StringDelimiter stringDelimiter = new StringDelimiter(new Delimiter(target));
-        List<String> strings = stringDelimiter.filteredString(target);
+        StringSeperator stringSeperator = new StringSeperator(new Delimiter(target));
+        List<String> strings = stringSeperator.filteredString(target);
 
         int result = UserNumbers.from(strings).sum();
         assertThat(result).isEqualTo(expected);
