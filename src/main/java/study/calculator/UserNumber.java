@@ -17,7 +17,7 @@ public class UserNumber {
             return 0;
         }
         int parseInt = Integer.parseInt(userString);
-        if(parseInt<0) {
+        if (parseInt < 0) {
             throw new RuntimeException();
         }
         return parseInt;
